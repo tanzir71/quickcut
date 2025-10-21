@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QuickCut — Minimal, Black & White Landing</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts: Jost (titles) & DM Sans (body) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Jost:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Black & white theme */
+      html, body {
+        background-color: #fff;
+        color: #000;
+        height: 100%;
+      }
+      body {
+        font-family: 'DM Sans', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Jost', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      }
+      a { color: #000; }
+      a:hover { color: #000; text-decoration: underline; }
+
+      .btn-cta {
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #000;
+      }
+      .btn-cta:hover {
+        background-color: #fff;
+        color: #000;
+        border-color: #000;
+      }
+      .btn-ghost {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+      }
+      .btn-ghost:hover {
+        background-color: #000;
+        color: #fff;
+        border-color: #000;
+      }
+      .divider {
+        height: 1px;
+        background: #000;
+        opacity: 0.1;
+        margin: 3rem 0;
+      }
+      .preview-img {
+        border: 1px solid #000;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
+      <header class="mt-5 mb-4">
+        <span class="fw-semibold" style="font-family: 'Jost', sans-serif; letter-spacing: 0.5px;">QuickCut</span>
+      </header>
+
+      <h1 class="display-4 fw-bold mb-3">Edit Faster. Speak Cleaner.</h1>
+      <p class="lead mb-4">A minimal tool that automatically removes silence and filler words from videos.</p>
+
+      <div class="d-flex gap-3 justify-content-center mb-5">
+        <a
+          class="btn btn-cta btn-lg px-4"
+          href="https://github.com/tanzir71/quickcut"
+          target="_blank"
+          rel="noopener"
+        >View on GitHub</a>
+        <a
+          class="btn btn-ghost btn-lg px-4"
+          href="https://github.com/tanzir71/quickcut/releases/tag/Installer"
+          target="_blank"
+          rel="noopener"
+        >Download</a>
+      </div>
+
+      <!-- Description + Preview -->
+      <section class="w-100" style="max-width: 960px;">
+        <h2 class="h4 fw-semibold mt-5 mb-2">What is QuickCut?</h2>
+        <p class="mb-4">QuickCut uses offline VOSK speech recognition to detect spoken words, remove silence and filler words, and automatically stitch the best parts of your video. Configure thresholds, fades, and output formats via a clean, cross‑platform interface.</p>
+        <figure class="text-center">
+          <img src="quickcut_preview.png" class="img-fluid preview-img" alt="QuickCut application preview" loading="lazy" />
+          <figcaption class="mt-2" style="color: #000; opacity: 0.6;"><small>Preview of the QuickCut interface.</small></figcaption>
+        </figure>
+      </section>
+
+      <div class="divider w-100"></div>
+
+      <section class="row g-4 w-100" style="max-width: 960px;">
+        <div class="col-12 col-md-4">
+          <h3 class="h5 fw-semibold mb-2">Silence Detection</h3>
+          <p class="mb-0">Automatically finds and removes pauses for tighter videos.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h3 class="h5 fw-semibold mb-2">Filler Word Cleanup</h3>
+          <p class="mb-0">ASR timestamps trim "um", "uh", and similar fillers from speech.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h3 class="h5 fw-semibold mb-2">Offline & Private</h3>
+          <p class="mb-0">Runs VOSK locally—no uploads, no cloud processing.</p>
+        </div>
+      </section>
+
+      <footer class="mt-5" style="color: #000; opacity: 0.6;">
+        <small>Vibe coded with love by <a href="https://tanziro.com" target="_blank" rel="noopener">Tanzir</a> from Bangladesh.</small>
+      </footer>
+    </main>
+
+    <script>
+      var yearEl = document.getElementById('year');
+      if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+    </script>
+  </body>
+</html>
